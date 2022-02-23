@@ -17,6 +17,8 @@
 	</section>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+import Vue from 'vue';
 
-<style></style>
+export default Vue.extend({});
+</script>

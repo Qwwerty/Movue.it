@@ -1,4 +1,4 @@
-import { State, Getters, Mutations, MutationsInterface } from "./types";
+import { State, Getters, Mutations, MutationsInterface } from './types';
 
 const MINUTES = 25;
 
@@ -9,8 +9,8 @@ export const state = (): State => ({
 });
 
 export const getters: Getters = {
-	minutes: (state) => Math.floor(state.time / 60),
-	seconds: (state) => state.time % 60,
+	minutes: state => Math.floor(state.time / 60),
+	seconds: state => state.time % 60,
 };
 
 export const mutations: MutationsInterface = {
@@ -21,9 +21,9 @@ export const mutations: MutationsInterface = {
 		state.time = MINUTES * 60;
 	},
 	[Mutations.SET_IS_ACTIVE](state, isActive) {
-		state.isActive = isActive
+		state.isActive = isActive;
 	},
 	[Mutations.SET_HAS_COMPLETED](state, hasCompleted) {
-		state.hasCompleted = hasCompleted
+		state.hasCompleted = hasCompleted;
 	},
 };
